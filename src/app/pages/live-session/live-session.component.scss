@@ -1,0 +1,32 @@
+.live-session-page {
+    padding: 1rem;
+    background: var(--background-color);
+  
+    .section-header {
+      margin-bottom: 1rem;
+      
+      h2 {
+        margin: 0 0 0.5rem 0;
+      }
+      
+      .session-info {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+      }
+    }
+  
+    .content-row {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+    }
+  
+    .chart-row {
+      margin-top: 1rem;
+    }
+  }

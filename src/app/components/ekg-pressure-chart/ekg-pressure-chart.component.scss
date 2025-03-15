@@ -1,0 +1,39 @@
+.ekg-pressure-chart-container {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+  
+    h3 {
+      margin: 0 0 1rem 0;
+    }
+  
+    .chart-container {
+      width: 620px; // The container is a bit bigger than the chart
+      height: auto;
+      border: 1px solid #666;
+      position: relative;
+    }
+  
+    /* Optional styling for axes/lines */
+    .ekg-line {
+      stroke: steelblue;
+      stroke-width: 2;
+      fill: none;
+    }
+    .pressure-line {
+      stroke: tomato;
+      stroke-width: 2;
+      fill: none;
+    }
+    .x-axis path, .x-axis line,
+    .y-axis-ekg path, .y-axis-ekg line,
+    .y-axis-pressure path, .y-axis-pressure line {
+      stroke: #bbb;
+    }
+    .x-axis text, .y-axis-ekg text, .y-axis-pressure text {
+      font-size: 10px;
+      fill: #333;
+    }
+  }
+  

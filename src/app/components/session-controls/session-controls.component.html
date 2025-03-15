@@ -1,1 +1,83 @@
-<p>session-controls works!</p>
+<br />
+<div class="controls-container">
+  <!-- Take Initial Photo -->
+  <button 
+    class="primary"
+    (click)="takeInitialPhoto()"
+    [disabled]="!shouldEnableInitialPhotoButton()"
+  >
+    Initial Photo
+  </button>
+
+  <!-- Begin Session -->
+  <button
+    class="primary"
+    *ngIf="shouldDisplayBeginButton()"
+    (click)="begin()"
+  >
+    Begin
+  </button>
+
+  <!-- Continue Session -->
+  <button
+    class="primary"
+    *ngIf="shouldDisplayContinueButton()"
+    (click)="continue()"
+    [disabled]="!shouldEnableContinueButton()"
+  >
+    Continue
+  </button>
+
+  <!-- Pause Session -->
+  <button
+    class="accent"
+    (click)="pause()"
+    [disabled]="!shouldEnablePauseButton()"
+  >
+    Pause
+  </button>
+
+  <!-- End Session -->
+  <button
+    class="warn"
+    (click)="end()"
+    [disabled]="!shouldEnableEndButton()"
+  >
+    End
+  </button>
+
+  <!-- Reset Session -->
+  <button
+    class="warn"
+    (click)="reset()"
+    [disabled]="!shouldEnableResetButton()"
+  >
+    Reset
+  </button>
+</div>
+<br />
+<div class="select-container">
+  <div class="form-field">
+    <label for="decellularizationSelect">Decellularization status</label>
+    <select 
+      id="decellularizationSelect"
+      [(ngModel)]="selectedStatus" 
+      (change)="setDecellularizationStatus()"
+    >
+      <option
+        *ngFor="let ds of decellularizationStatuses"
+        [value]="ds.value"
+      >
+        {{ ds.viewValue }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Hard Reset -->
+  <button
+    class="warn"
+    (click)="hardReset()"
+  >
+    Hard Reset
+  </button>
+</div>

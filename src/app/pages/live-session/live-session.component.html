@@ -1,1 +1,23 @@
-<p>live-session works!</p>
+<div class="live-session-page">
+    <div class="section-header">
+      <h2>Live Session</h2>
+      <p *ngIf="sessionId" class="session-info">Active Session ID: {{ sessionId }}</p>
+      <p *ngIf="!sessionId" class="session-info">No session is currently active.</p>
+    </div>
+  
+    <div class="content-row">
+      <!-- Camera feed on the left -->
+      <app-camera-feed></app-camera-feed>
+  
+      <!-- Point cloud viewer on the right -->
+      <app-pointcloud-viewer></app-pointcloud-viewer>
+    </div>
+  
+    <!-- EKG/Pressure chart below -->
+    <div class="chart-row">
+      <app-ekg-pressure-chart></app-ekg-pressure-chart>
+    </div>
+    
+    <!-- Session controls -->
+    <app-session-controls></app-session-controls>
+  </div>

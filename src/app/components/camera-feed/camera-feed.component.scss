@@ -1,0 +1,44 @@
+.camera-feed-container {
+    margin: 1rem;
+    padding: 1rem;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+  
+    h2 {
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+    }
+  
+    .images-row {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+  
+      .img-container {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 220px;
+  
+        .label {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+  
+        img {
+          max-width: 200px;
+          max-height: 200px;
+          border: 1px solid #666;
+        }
+  
+        p {
+          color: #777;
+        }
+      }
+    }
+  }
+  
