@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 import { CppApiService } from '../../services/cpp-api/cpp-api.service';
 
 @Component({
   selector: 'app-camera-feed',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './camera-feed.component.html',
   styleUrl: './camera-feed.component.scss'
 })

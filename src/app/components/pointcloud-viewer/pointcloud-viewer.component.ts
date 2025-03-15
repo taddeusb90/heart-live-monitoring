@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { CppApiService } from '../../services/cpp-api/cpp-api.service';
 
@@ -15,7 +16,7 @@ interface PointCloudData {
 
 @Component({
   selector: 'app-pointcloud-viewer',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pointcloud-viewer.component.html',
   styleUrl: './pointcloud-viewer.component.scss'
 })

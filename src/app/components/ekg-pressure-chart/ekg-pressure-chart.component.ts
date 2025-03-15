@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import * as d3 from 'd3';
 
@@ -18,7 +19,7 @@ interface EkgPressurePoint {
 }
 @Component({
   selector: 'app-ekg-pressure-chart',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './ekg-pressure-chart.component.html',
   styleUrl: './ekg-pressure-chart.component.scss'
 })
@@ -85,7 +86,12 @@ export class EkgPressureChartComponent {
    * Initialize chart elements once
    */
   private initChart(): void {
-    // Basic svg setup
+    // Initialize the SVG element
+    this.svg = d3.select(this.chartContainer.nativeElement)
+      .append('svg')
+      .attr('width', this.width + this.margin.left + this.margin.right)
+      .attr('height', this.height + this.margin.top + this.margin.bottom);
+
     const g = this.svg
       .append('g')
       .attr('transform', `translate(${this.margin.left},${this.margin.top})`);

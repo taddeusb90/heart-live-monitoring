@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { SessionManagerService } from '../../services/session-manager/session-manager.service';
 
 // Example constants for decellularization statuses
@@ -8,9 +10,12 @@ export const INCOMPLETE = 'INCOMPLETE';
 
 @Component({
   selector: 'app-session-controls',
-  imports: [],
   templateUrl: './session-controls.component.html',
-  styleUrl: './session-controls.component.scss'
+  styleUrls: ['./session-controls.component.scss'],
+  imports: [
+    CommonModule,
+    FormsModule
+  ]
 })
 export class SessionControlsComponent {
   // This might be a user-chosen status in the UI
