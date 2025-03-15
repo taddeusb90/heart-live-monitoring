@@ -1,13 +1,16 @@
 {
-  "name": "electron-app",
+  "name": "heart-live-monitoring",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "ng build --base-href ./ && electron .",
+    "electron:build": "ng build -c production && electron-builder"
   },
+  "main": "main.js",
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
@@ -26,6 +29,8 @@
     "@angular/cli": "^19.2.3",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

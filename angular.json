@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "electron-app": {
+    "heart-live-monitoring": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/electron-app",
+            "outputPath": "dist/heart-live-monitoring",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "electron-app:build:production"
+              "buildTarget": "heart-live-monitoring:build:production"
             },
             "development": {
-              "buildTarget": "electron-app:build:development"
+              "buildTarget": "heart-live-monitoring:build:development"
             }
           },
           "defaultConfiguration": "development"
